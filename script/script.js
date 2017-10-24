@@ -13,11 +13,14 @@ function getBooks(e) {
             if (data.length > 0) {
                 for (val in data) {
                     resultsBox.append(
-                        '<div class="card"><div class="card-header">'
+                        '<div class="card book"><div class="card-header book--subject">'
                         + data[val].subject +
                         '</div><div class="card-body"><img class="img-responsive center-block" src="'
-                        + data[val].cover + '">'
-                        + data[val].title + '---' + data[val].levels[0].school + '</div></div>');
+                        + data[val].cover + '"><div class="book--info">' +
+                        '<div class="book--info__title"><h3 class="card-title">'
+                        + data[val].title + '</h3><h4 class="card-title book--info__author">'
+                        + data[val].author + '</h4><div class="book--info__levels">'
+                        + data[val].levels[0].school + '</div></div></div>');
                 }
             } else {
                 resultsBox.append('<p>nie znaleziono tego hasła</p>');

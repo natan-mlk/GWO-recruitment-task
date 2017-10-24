@@ -1,3 +1,43 @@
-body {
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext");
+}
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(51, 51, 51);
+  background-color: rgb(234, 236, 236);
+}
+
+
+.header {
+  background-color: white;
+  border-bottom: solid 3px #ec5800;
+  &--heading {
+    padding: 4% 0 1%;
+    color: rgb(51, 51, 51);
+  }
+}
+
+
+.search-block {
+  padding: 5%;
+  &--column {
+    margin: 0 auto;
+  }
+}
+
+.card {
+  width: 23%;
+  margin: 1% 1%;
+}
+
+img {
+  max-width: 80%; }
+
+.book {
+  padding: 0;
+  &--subject {
+    border-bottom: none;
+  }
 }
