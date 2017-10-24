@@ -2,6 +2,9 @@ $search-block-bg: #c1c1c1;
 $accent-strong: #ec5800;
 $accent-light: #ee7f00;
 
+$anim-color-1: #faba00;
+$anim-color-2: #db001b;
+
 @font-face {
   font-family: 'Open Sans', sans-serif;
   src: url("https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext");
@@ -23,12 +26,28 @@ body {
 
 .header {
   background-color: white;
-  border-bottom: solid 7px $accent-strong;
+  padding: 2% 0 1%;
+  //border-bottom: solid 7px $accent-strong;
   &--heading {
-    padding: 2% 0 1%;
     font-size: 1.4rem;
     color: darken($search-block-bg, 30);
   }
+}
+
+.decoration-block {
+  height: 15px;
+  background: $anim-color-2;
+  background-image:
+          linear-gradient(90deg, $anim-color-1 50px, transparent 0),
+          linear-gradient(90deg, $accent-strong 37px, transparent 0),
+          linear-gradient(90deg, $accent-light 27px, transparent 0);
+  background-size: 145px 100%, 67px 100%, 72px 100%;
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+}
+
+.decoration-block__bg {
+  background-size: 226px 100%, 96px 100%, 60px 100%;
 }
 
 .search-block {
@@ -111,7 +130,7 @@ img {
   }
 
   .card {
-    width: 30%;
+    width: 31.3%;;
     margin: 1% 1%;
   }
 }

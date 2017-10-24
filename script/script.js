@@ -2,11 +2,14 @@ function getBooks(e) {
     e.preventDefault();
     var alert = $('#alert');
     var item = $('#usersInput').val();
+    var resultsBox = $('#results');
     alert.empty();
+    resultsBox.empty();
 
     if (item === '') {
-        alert.append('Będzie łatwiej znaleźć, kiedy coś tu wpiszesz :)').show('fast', 'swing');
+        alert.append('Będzie łatwiej znaleźć, kiedy coś tu wpiszesz <img src="assets/pencil.svg"> :)').show('fast', 'swing');
     } else {
+        $('.decoration-block').toggleClass('decoration-block__bg');
         alert.hide('fast', 'swing');
         $.ajax({
             url: 'https://gwo.pl/booksApi/v1/search?query=' + item,
@@ -14,9 +17,6 @@ function getBooks(e) {
             type: 'GET',
             data: {},
             success: function (data) {
-                console.log(data);
-                var resultsBox = $('#results');
-                resultsBox.empty();
                 if (data.length > 0) {
                     for (val in data) {
                         resultsBox.append(
@@ -41,4 +41,3 @@ function getBooks(e) {
 }
 
 $('#search').on('click', getBooks);
-
