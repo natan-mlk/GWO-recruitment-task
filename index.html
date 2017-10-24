@@ -16,18 +16,22 @@
 
 <header>
     <div class="container-fluid header">
-        <h1 class="text-center header--heading">Wyszukiwarka podręczników</h1>
+        <h1 class="text-center header--heading">Znajdź podręcznik dla siebie</h1>
     </div>
 </header>
 
 <section id="formWithInput">
     <div class="container-fluid search-block">
         <div class="row">
-            <div class="col-12 col-sm-6 col-lg-4 search-block--column">
+            <div class="col-12 col-sm-8 col-lg-6 col-xl-4 search-block--column">
+                <p class="search-block--parag">Powiedz, co Cię interesuje?</p>
                 <div class="input-group">
-                    <input id="usersInput" type="text" class="form-control form-control-lg" placeholder="np. historia">
+                    <input id="usersInput" type="text" placeholder="np. historia"
+                           class="form-control form-control-lg search-block--input">
                     <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button" id="search">Szukaj</button>
+        <button class="btn btn-secondary search-block--button" type="button" id="search">
+            <span>Szukaj<img class="search-block--button--img" src="assets/search.svg"></span>
+        </button>
       </span>
                 </div>
             </div>
@@ -36,9 +40,13 @@
 </section>
 
 <section id="searchResults">
-    <div class="container ">
-        <div class="row" id="results">
+    <div class="container results-block">
 
+        <div class="alert alert-dark results-block--alert" role="alert">
+
+        </div>
+
+        <div class="row" id="results">
         </div>
     </div>
 </section>
