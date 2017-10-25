@@ -22,6 +22,7 @@ body {
 
 .row {
   margin: 0;
+  justify-content: center;
 }
 
 .container-fluid, .navbar {
@@ -108,7 +109,9 @@ body {
 
 .book {
   width: 90%;
-  margin: 5% 5%;
+  margin: 10px 10px;
+
+
   -webkit-box-shadow: 0 0 3px 1px #bbb;
   -moz-box-shadow: 0 0 3px 1px #bbb;
   box-shadow: 0 0 3px 1px #bbb;
@@ -152,8 +155,7 @@ body {
   }
 
   .card {
-    width: 48%;
-    margin: 1% 1%;
+    width: 46%;
   }
 
   .header {
@@ -166,8 +168,8 @@ body {
 @media (min-width: 992px) {
 
   .card {
-    width: 31.3%;;
-    margin: 1% 1%;
+    width: 31%;;
+    //margin: 1% 1%;
   }
 }
 
@@ -177,6 +179,5 @@ body {
   }
   .card {
     width: 23%;
-    margin: 1% 1%;
   }
 }
