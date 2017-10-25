@@ -10,16 +10,6 @@ $anim-color-2: #db001b;
   src: url("https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext");
 }
 
-@font-face {
-  font-family: 'Open Sans italic';
-  src: url("https://fonts.googleapis.com/css?family=Open+Sans:400i&amp;subset=latin-ext");
-}
-
-@font-face {
-  font-family: 'Open Sans bold';
-  src: url("https://fonts.googleapis.com/css?family=Open+Sans:600&subset=latin-ext");
-}
-
 html {
   overflow-y: scroll;
 }
@@ -42,7 +32,7 @@ body {
 .header {
   background-color: white;
   padding: 2% 0 1%;
-  &--heading {
+  &__heading {
     font-size: 1.4rem;
     color: darken($search-block-bg, 30);
   }
@@ -59,22 +49,21 @@ body {
   transition: 2s ease-in-out;
 }
 
-.decoration-block__bg {
+.decoration-block--bg {
   background-size: 226px 100%, 96px 100%, 60px 100%;
 }
 
 .search-block {
-  //padding: 5% 0;
   background-color: $search-block-bg;
-  &--column {
+  &__column {
     margin: 0 auto;
   }
-  &--parag {
+  &__parag {
     color: white;
     font-size: 1.3rem;
     margin-top: 4%;
   }
-  &--input {
+  &__input {
     &:focus {
       border-color: grey;
       box-shadow: none;
@@ -83,7 +72,7 @@ body {
   .input-group {
     margin: 4% 0 5%;
   }
-  &--button {
+  &__button {
     cursor: pointer;
     background-color: $accent-strong;
     border: none;
@@ -94,14 +83,14 @@ body {
     &:focus {
       box-shadow: none;
     }
-    &--img {
+    &__img {
       margin: 0 0 0 7px;
       height: 20px;
     }
   }
 }
 
-.arrow--svg {
+.arrow__svg {
   display: block;
   margin: -1px auto 0;
   height: 30px;
@@ -109,7 +98,7 @@ body {
 
 .results-block {
   padding: 2% 0 2%;
-  &--alert {
+  &__alert {
     display: none;
     margin: 0 auto;
     text-align: center;

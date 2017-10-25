@@ -3,10 +3,10 @@ $(window).on('scroll', function () {
     var headerHeight = $('.header').outerHeight();
     var scrollTop = $(window).scrollTop();
     if (scrollTop > (headerHeight)) {
-        $('.search-block--parag').hide('fast', 'swing')
+        $('.search-block__parag').hide('fast', 'swing')
     }
     if (scrollTop < (headerHeight)) {
-        $('.search-block--parag').show('fast', 'swing')
+        $('.search-block__parag').show('fast', 'swing')
     }
 });
 
@@ -21,7 +21,7 @@ function getBooks(e) {
     if (item === '') {
         alert.append('Będzie łatwiej znaleźć, jeśli coś tu wpiszesz <img src="assets/pencil.svg"> :)').show('fast', 'swing');
     } else {
-        $('.decoration-block').toggleClass('decoration-block__bg');
+        $('.decoration-block').toggleClass('decoration-block--bg');
         alert.hide('fast', 'swing');
 
         $.ajax({

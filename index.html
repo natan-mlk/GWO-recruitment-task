@@ -17,7 +17,7 @@
 
 <header>
     <div class="container-fluid header">
-        <h1 class="text-center header--heading">Znajdź podręcznik dla siebie</h1>
+        <h1 class="text-center header__heading">Znajdź podręcznik dla siebie</h1>
     </div>
 </header>
 
@@ -25,15 +25,15 @@
     <div class="container-fluid decoration-block"></div>
 
     <div class="container-fluid search-block">
-        <div class="col-12 col-sm-8 col-lg-6 col-xl-4 search-block--column">
-            <p class="search-block--parag">Powiedz, co Cię interesuje?</p>
+        <div class="col-12 col-sm-8 col-lg-6 col-xl-4 search-block__column">
+            <p class="search-block__parag">Powiedz, co Cię interesuje?</p>
             <form>
                 <div class="input-group">
                     <input id="usersInput" type="text" placeholder="np. historia"
-                           class="form-control form-control-lg search-block--input">
+                           class="form-control form-control-lg search-block__input">
                     <span class="input-group-btn">
-        <button class="btn btn-secondary search-block--button" type="submit" id="search">
-            <span>Szukaj<img class="search-block--button--img" src="assets/search.svg" alt="search"></span>
+        <button class="btn btn-secondary search-block__button" type="submit" id="search">
+            <span>Szukaj<img class="search-block__button__img" src="assets/search.svg" alt="search"></span>
         </button>
       </span>
                 </div>
@@ -42,14 +42,14 @@
     </div>
 
     <div class="container-fluid arrow">
-        <img class="arrow--svg" src="assets/arrow-down.svg" alt="arrow down decoration">
+        <img class="arrow__svg" src="assets/arrow-down.svg" alt="arrow down decoration">
     </div>
 </nav>
 
 <section id="searchResults">
     <div class="container results-block">
 
-        <div class="alert alert-dark results-block--alert col-12 col-sm-8 col-lg-6 col-xl-4"
+        <div class="alert alert-dark results-block__alert col-12 col-sm-8 col-lg-6 col-xl-4"
              role="alert" id="alert">
         </div>
 
@@ -58,8 +58,6 @@
         </div>
     </div>
 </section>
-
-<footer>Zadanie rekrutacyjne dla GWO. Adam Milko</footer>
 
 <script src="script/script.js"></script>
 </body>
