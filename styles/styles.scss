@@ -109,31 +109,38 @@ body {
   -moz-box-shadow: 0 0 3px 1px #bbb;
   box-shadow: 0 0 3px 1px #bbb;
   border-radius: 0;
-&--link {
-  background-color: $accent-strong;
-  border-radius: 0;
-  border: none;
-  &:hover, &:not([disabled]):not(.disabled):active {
-    background-color: $accent-light;
+  &--link {
+    background-color: $accent-strong;
+    border-radius: 0;
+    border: none;
+    &:hover, &:not([disabled]):not(.disabled):active {
+      background-color: $accent-light;
+    }
+    &:focus, &:not([disabled]):not(.disabled):active {
+      box-shadow: none;
+    }
+    &--img {
+      margin: 0 0 0 7px;
+      height: 25px;
+    }
   }
-  &:focus, &:not([disabled]):not(.disabled):active {
-    box-shadow: none;
-  }
-  &--img {
-    margin: 0 0 0 7px;
-    height: 25px;
-  }
-}
-}
-
-img {
-  max-width: 80%;
 }
 
 .book {
-  padding: 0;
+  .card-body {
+    padding: 0;
+  }
   &--subject {
     border-bottom: none;
+  }
+  &--cover {
+    &--image {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      max-width: 150px;
+      border: 1px solid $search-block-bg;
+    }
   }
 }
 

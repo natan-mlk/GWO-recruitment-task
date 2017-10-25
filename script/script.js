@@ -2,16 +2,13 @@ $(window).on('scroll', function () {
 
     var headerHeight = $('.header').outerHeight();
     var scrollTop = $(window).scrollTop();
-    console.log(scrollTop);
     if (scrollTop > (headerHeight)) {
-        console.log("jojo");
         $('.search-block--parag').hide('fast', 'swing')
     }
     if (scrollTop <= (headerHeight)) {
         $('.search-block--parag').show('fast', 'swing')
     }
 });
-
 
 function getBooks(e) {
     e.preventDefault();
@@ -22,7 +19,7 @@ function getBooks(e) {
     resultsBox.empty();
 
     if (item === '') {
-        alert.append('Będzie łatwiej znaleźć, kiedy coś tu wpiszesz <img src="assets/pencil.svg"> :)').show('fast', 'swing');
+        alert.append('Będzie łatwiej znaleźć, jeśli coś tu wpiszesz <img src="assets/pencil.svg"> :)').show('fast', 'swing');
     } else {
         $('.decoration-block').toggleClass('decoration-block__bg');
         alert.hide('fast', 'swing');
@@ -39,14 +36,15 @@ function getBooks(e) {
                         resultsBox.append(
                             '<div class="card book"><div class="card-header book--subject">'
                             + data[val].subject +
-                            '</div><div class="card-body"><img class="img-responsive center-block" src="'
-                            + data[val].cover + '"><div class="book--info">' +
-                            '<div class="book--info__title"><h3 class="card-title">'
-                            + data[val].title + '</h3><h4 class="card-title book--info__author">'
-                            + data[val].author + '</h4><div class="book--info__levels">'
-                            + data[val].levels[0].school + '</div></div><a target="_blank" href="'
-                            + data[val].url+' " class="btn btn-primary book--link">Do księgarni ' +
-                            '<img class="book--link--img" src="assets/book.svg" alt="shop online"></a></div>');
+                            '</div><div class="card-body"><div class="book--cover"><img class="img-responsive center-block book--cover--image" src="'
+                            + data[val].cover + '"></div><div class="book--title"><h5 class="card-title book--title">'
+                            + data[val].title + '</h5></div><div class="book--info">'
+                            + data[val].type + '</div><div class="book--author"><h6 class="card-title">'
+                            + data[val].author + '</h6></div><div class="book--level">'
+                            + data[val].levels[0].school+ ', ' + data[val].levels[0].class +  '</div><div class="book--numbers">nr MEN: '
+                            + data[val].men + '</div><a target="_blank" href="'
+                            + data[val].url + ' " class="btn btn-primary book--link">Do księgarni ' +
+                            '<img class="book--link--img" src="assets/book.svg" alt="shop online"></a></div></div>');
                     }
                 } else {
                     alert.append('Nie mamy tego w naszej bazie. Spróbuj inne hasło').show('fast', 'swing');
