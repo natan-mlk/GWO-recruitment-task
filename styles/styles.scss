@@ -113,55 +113,38 @@ body {
   -moz-box-shadow: 0 0 3px 1px #bbb;
   box-shadow: 0 0 3px 1px #bbb;
   border-radius: 0;
-  .card-body {
-    //padding: 0;
-    //position: relative;
 
-    display: flex;
-    flex-direction: column;
-  }
-  &--subject {
+  &__subject {
     text-align: center;
     text-transform: capitalize;
   }
 
-  &--cover {
+  &__cover {
     padding: 0 0 5%;
     height: 220px;
-    &--image {
+    &__image {
       display: block;
       margin: 0 auto;
       height: 100%;
-      max-width: 150px;
       border: 1px solid $search-block-bg;
     }
   }
 
-  &--info {
-    font-family: 'Open Sans bold', sans-serif;
+  &__info {
     color: gray;
     font-weight: 600;
     margin-top: -12px;
   }
 
-  &--author {
+  &__author {
     margin: 5px 0;
-    font-family: 'Open Sans italic', sans-serif;
     font-style: italic;
   }
 
-  &--numbers {
+  &__numbers {
     margin-top: 5%;
     color: gray;
     font-size: 15px;
-  }
-
-  &--link-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-top: 5%;
-    flex-grow: 2;
   }
 
   &__footer {
@@ -169,23 +152,22 @@ body {
     background-color: transparent;
     border-top: none;
     display: flex;
-  }
-
-  &--link {
-    background-color: $accent-strong;
-    border-radius: 0;
-    border: none;
-    max-width: 160px;
-    margin: 0 auto;
-    &:hover, &:not([disabled]):not(.disabled):active {
-      background-color: $accent-light;
-    }
-    &:focus, &:not([disabled]):not(.disabled):active {
-      box-shadow: none;
-    }
-    &--img {
-      margin: 0 0 0 7px;
-      height: 25px;
+    &__link {
+      background-color: $accent-strong;
+      border-radius: 0;
+      border: none;
+      max-width: 160px;
+      margin: 0 auto;
+      &:hover, &:not([disabled]):not(.disabled):active {
+        background-color: $accent-light;
+      }
+      &:focus, &:not([disabled]):not(.disabled):active {
+        box-shadow: none;
+      }
+      &__img {
+        margin: 0 0 0 7px;
+        height: 25px;
+      }
     }
   }
 }
@@ -201,7 +183,7 @@ body {
   }
 
   .header {
-    &--heading {
+    &__heading {
       font-size: 2rem;
     }
   }
@@ -211,7 +193,6 @@ body {
 
   .card {
     width: 31%;;
-    //margin: 1% 1%;
   }
 }
 

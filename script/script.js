@@ -34,19 +34,19 @@ function getBooks(e) {
                 if (data.length > 0) {
                     for (val in data) {
                         resultsBox.append(
-                            '<div class="card book"><div class="card-header book--subject">'
-                            + data[val].subject +
-                            '</div><div class="card-body">' +
-                            '<div class="book--cover"><img class=" center-block book--cover--image" src="'
-                            + data[val].cover + '"></div><div class="book--title"><h5 class="card-title book--title">'
-                            + data[val].title + '</h5></div><div class="book--info">'
-                            + data[val].type + '</div><div class="book--author"><h6 class="card-title">'
-                            + data[val].author + '</h6></div><div class="book--level">'
-                            + data[val].levels[0].school+ ', ' + data[val].levels[0].class +  '</div><div class="book--numbers">nr MEN: '
+                            '<div class="card book"><div class="card-header book__subject">'
+                            + data[val].subject + '</div><div class="card-body">' +
+                            '<div class="book__cover"><img class="center-block book__cover__image" src="'
+                            + data[val].cover + '"></div><div class="book__title"><h5 class="card-title book--title">'
+                            + data[val].title + '</h5></div><div class="book__info">'
+                            + data[val].type + '</div><div class="book__author"><h6 class="card-title">'
+                            + data[val].author + '</h6></div><div class="book__level">'
+                            + data[val].levels[0].school+ ', ' + data[val].levels[0].class +  '</div><div' +
+                            ' class="book__numbers">nr MEN: '
                             + data[val].men + ', isbn:' + data[val].isbn + '</div></div>' +
                             '<div class="card-footer book__footer"><a target="_blank" href="'
-                            + data[val].url + ' " class="btn btn-primary book--link">Do księgarni ' +
-                            '<img class="book--link--img" src="assets/book.svg" alt="shop online"></a></div></div>');
+                            + data[val].url + ' " class="btn btn-primary book__footer__link">Do księgarni ' +
+                            '<img class="book__footer__link__img" src="assets/book.svg" alt="shop online"></a></div></div>');
                     }
                 } else {
                     alert.append('Nie mamy tego w naszej bazie. Spróbuj inne hasło').show('fast', 'swing');
