@@ -15,43 +15,36 @@
 <body>
 
 
-
 <header>
     <div class="container-fluid header">
-            <h1 class="text-center header--heading">Znajdź podręcznik dla siebie</h1>
+        <h1 class="text-center header--heading">Znajdź podręcznik dla siebie</h1>
     </div>
 </header>
 
-
-
 <nav class="navbar sticky-top" id="searchBlock">
-    <div class="container-fluid decoration-block">
-    </div>
+    <div class="container-fluid decoration-block"></div>
+
     <div class="container-fluid search-block">
-            <div class="col-12 col-sm-8 col-lg-6 col-xl-4 search-block--column">
-                <p class="search-block--parag">Powiedz, co Cię interesuje?</p>
+        <div class="col-12 col-sm-8 col-lg-6 col-xl-4 search-block--column">
+            <p class="search-block--parag">Powiedz, co Cię interesuje?</p>
+            <form>
                 <div class="input-group">
                     <input id="usersInput" type="text" placeholder="np. historia"
                            class="form-control form-control-lg search-block--input">
                     <span class="input-group-btn">
-        <button class="btn btn-secondary search-block--button" type="button" id="search">
+        <button class="btn btn-secondary search-block--button" type="submit" id="search">
             <span>Szukaj<img class="search-block--button--img" src="assets/search.svg" alt="search"></span>
         </button>
       </span>
                 </div>
-            </div>
-
+            </form>
+        </div>
     </div>
+
     <div class="container-fluid arrow">
         <img class="arrow--svg" src="assets/arrow-down.svg" alt="arrow down decoration">
     </div>
 </nav>
-
-
-<!--<section id="formWithInput">-->
-
-<!--</section>-->
-
 
 <section id="searchResults">
     <div class="container results-block">

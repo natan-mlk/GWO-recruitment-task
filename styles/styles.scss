@@ -53,7 +53,7 @@ body {
 }
 
 .search-block {
-  padding: 2% 0 5%;
+  padding: 5% 0;
   background-color: $search-block-bg;
   &--column {
     margin: 0 auto;
@@ -102,14 +102,28 @@ body {
   }
 }
 
-.card {
+.book {
   width: 90%;
   margin: 5% 5%;
   -webkit-box-shadow: 0 0 3px 1px #bbb;
   -moz-box-shadow: 0 0 3px 1px #bbb;
   box-shadow: 0 0 3px 1px #bbb;
   border-radius: 0;
-
+&--link {
+  background-color: $accent-strong;
+  border-radius: 0;
+  border: none;
+  &:hover, &:not([disabled]):not(.disabled):active {
+    background-color: $accent-light;
+  }
+  &:focus, &:not([disabled]):not(.disabled):active {
+    box-shadow: none;
+  }
+  &--img {
+    margin: 0 0 0 7px;
+    height: 25px;
+  }
+}
 }
 
 img {
@@ -124,6 +138,11 @@ img {
 }
 
 @media (min-width: 576px) {
+
+  .search-block {
+    padding: 2% 0 2%;
+  }
+
   .card {
     width: 48%;
     margin: 1% 1%;
@@ -137,10 +156,6 @@ img {
 }
 
 @media (min-width: 992px) {
-
-  .search-block {
-    padding: 2% 0 2%;
-  }
 
   .card {
     width: 31.3%;;

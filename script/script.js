@@ -33,6 +33,7 @@ function getBooks(e) {
             type: 'GET',
             data: {},
             success: function (data) {
+                console.log(data);
                 if (data.length > 0) {
                     for (val in data) {
                         resultsBox.append(
@@ -43,7 +44,9 @@ function getBooks(e) {
                             '<div class="book--info__title"><h3 class="card-title">'
                             + data[val].title + '</h3><h4 class="card-title book--info__author">'
                             + data[val].author + '</h4><div class="book--info__levels">'
-                            + data[val].levels[0].school + '</div></div></div>');
+                            + data[val].levels[0].school + '</div></div><a target="_blank" href="'
+                            + data[val].url+' " class="btn btn-primary book--link">Do księgarni ' +
+                            '<img class="book--link--img" src="assets/book.svg" alt="shop online"></a></div>');
                     }
                 } else {
                     alert.append('Nie mamy tego w naszej bazie. Spróbuj inne hasło').show('fast', 'swing');
