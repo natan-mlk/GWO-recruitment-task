@@ -5,7 +5,7 @@ $(window).on('scroll', function () {
     if (scrollTop > (headerHeight)) {
         $('.search-block--parag').hide('fast', 'swing')
     }
-    if (scrollTop <= (headerHeight)) {
+    if (scrollTop < (headerHeight)) {
         $('.search-block--parag').show('fast', 'swing')
     }
 });
@@ -36,13 +36,15 @@ function getBooks(e) {
                         resultsBox.append(
                             '<div class="card book"><div class="card-header book--subject">'
                             + data[val].subject +
-                            '</div><div class="card-body"><div class="book--cover"><img class="img-responsive center-block book--cover--image" src="'
+                            '</div><div class="card-body">' +
+                            '<div class="book--cover"><img class=" center-block book--cover--image" src="'
                             + data[val].cover + '"></div><div class="book--title"><h5 class="card-title book--title">'
                             + data[val].title + '</h5></div><div class="book--info">'
                             + data[val].type + '</div><div class="book--author"><h6 class="card-title">'
                             + data[val].author + '</h6></div><div class="book--level">'
                             + data[val].levels[0].school+ ', ' + data[val].levels[0].class +  '</div><div class="book--numbers">nr MEN: '
-                            + data[val].men + '</div><a target="_blank" href="'
+                            + data[val].men + ', isbn:' + data[val].isbn + '</div></div>' +
+                            '<div class="card-footer book__footer"><a target="_blank" href="'
                             + data[val].url + ' " class="btn btn-primary book--link">Do księgarni ' +
                             '<img class="book--link--img" src="assets/book.svg" alt="shop online"></a></div></div>');
                     }

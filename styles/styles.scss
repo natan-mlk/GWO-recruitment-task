@@ -6,8 +6,18 @@ $anim-color-1: #faba00;
 $anim-color-2: #db001b;
 
 @font-face {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   src: url("https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext");
+}
+
+@font-face {
+  font-family: 'Open Sans italic';
+  src: url("https://fonts.googleapis.com/css?family=Open+Sans:400i&amp;subset=latin-ext");
+}
+
+@font-face {
+  font-family: 'Open Sans bold';
+  src: url("https://fonts.googleapis.com/css?family=Open+Sans:600&subset=latin-ext");
 }
 
 html {
@@ -110,19 +120,74 @@ body {
 .book {
   width: 90%;
   margin: 10px 10px;
-
-
   -webkit-box-shadow: 0 0 3px 1px #bbb;
   -moz-box-shadow: 0 0 3px 1px #bbb;
   box-shadow: 0 0 3px 1px #bbb;
   border-radius: 0;
   .card-body {
-    padding: 0;
+    //padding: 0;
+    //position: relative;
+
+    display: flex;
+    flex-direction: column;
   }
+  &--subject {
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  &--cover {
+    padding: 0 0 5%;
+    height: 220px;
+    &--image {
+      display: block;
+      margin: 0 auto;
+      height: 100%;
+      max-width: 150px;
+      border: 1px solid $search-block-bg;
+    }
+  }
+
+  &--info {
+    font-family: 'Open Sans bold', sans-serif;
+    color: gray;
+    font-weight: 600;
+    margin-top: -12px;
+  }
+
+  &--author {
+    margin: 5px 0;
+    font-family: 'Open Sans italic', sans-serif;
+    font-style: italic;
+  }
+
+  &--numbers {
+    margin-top: 5%;
+    color: gray;
+    font-size: 15px;
+  }
+
+  &--link-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 5%;
+    flex-grow: 2;
+  }
+
+  &__footer {
+    padding: .75rem 1.25rem;
+    background-color: transparent;
+    border-top: none;
+    display: flex;
+  }
+
   &--link {
     background-color: $accent-strong;
     border-radius: 0;
     border: none;
+    max-width: 160px;
+    margin: 0 auto;
     &:hover, &:not([disabled]):not(.disabled):active {
       background-color: $accent-light;
     }
@@ -132,18 +197,6 @@ body {
     &--img {
       margin: 0 0 0 7px;
       height: 25px;
-    }
-  }
-  &--subject {
-    border-bottom: none;
-  }
-  &--cover {
-    &--image {
-      display: block;
-      margin: 0 auto;
-      width: 50%;
-      max-width: 150px;
-      border: 1px solid $search-block-bg;
     }
   }
 }
