@@ -11,6 +11,7 @@ function getBooks(e) {
     } else {
         $('.decoration-block').toggleClass('decoration-block__bg');
         alert.hide('fast', 'swing');
+
         $.ajax({
             url: 'https://gwo.pl/booksApi/v1/search?query=' + item,
             dataType: 'json',

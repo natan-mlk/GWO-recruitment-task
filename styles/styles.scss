@@ -11,7 +11,7 @@ $anim-color-2: #db001b;
 }
 
 html {
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
 
 body {
@@ -22,6 +22,13 @@ body {
 
 .row {
   margin: 0;
+}
+
+.test {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  //display: none;
 }
 
 .header {
@@ -35,12 +42,11 @@ body {
 }
 
 .decoration-block {
-  height: 15px;
+  height: 12px;
   background: $anim-color-2;
-  background-image:
-          linear-gradient(90deg, $anim-color-1 50px, transparent 0),
-          linear-gradient(90deg, $accent-strong 37px, transparent 0),
-          linear-gradient(90deg, $accent-light 27px, transparent 0);
+  background-image: linear-gradient(90deg, $anim-color-1 50px, transparent 0),
+  linear-gradient(90deg, $accent-strong 37px, transparent 0),
+  linear-gradient(90deg, $accent-light 27px, transparent 0);
   background-size: 145px 100%, 67px 100%, 72px 100%;
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
@@ -51,7 +57,7 @@ body {
 }
 
 .search-block {
-  padding: 3% 0 2%;
+  padding: 2% 0 5%;
   background-color: $search-block-bg;
   &--column {
     margin: 0 auto;
@@ -61,7 +67,7 @@ body {
     font-size: 1.3rem;
   }
   &--input {
-    &:focus{
+    &:focus {
       border-color: grey;
       box-shadow: none;
     }
@@ -74,7 +80,7 @@ body {
     &:hover, &:not([disabled]):not(.disabled):active {
       background-color: $accent-light;
     }
-    &:focus{
+    &:focus {
       box-shadow: none;
     }
     &--img {
@@ -84,19 +90,30 @@ body {
   }
 }
 
+.arrow--svg {
+  display: block;
+  margin: -1px auto 0;
+  height: 30px;
+}
+
 .results-block {
-  padding: 5% 0 2%;
+  padding: 2% 0 2%;
   &--alert {
     display: none;
     margin: 0 auto;
     text-align: center;
-    
+
   }
 }
 
 .card {
   width: 90%;
   margin: 5% 5%;
+  -webkit-box-shadow: 0 0 3px 1px #bbb;
+  -moz-box-shadow: 0 0 3px 1px #bbb;
+  box-shadow: 0 0 3px 1px #bbb;
+  border-radius: 0;
+
 }
 
 img {
@@ -125,8 +142,8 @@ img {
 
 @media (min-width: 992px) {
 
-  .results-block {
-    padding: 5% 0 2%;
+  .search-block {
+    padding: 3% 0 2%;
   }
 
   .card {
@@ -134,7 +151,6 @@ img {
     margin: 1% 1%;
   }
 }
-
 
 @media (min-width: 1200px) {
   .container {
