@@ -1,3 +1,18 @@
+$(window).on('scroll', function () {
+
+    var headerHeight = $('.header').outerHeight();
+    var scrollTop = $(window).scrollTop();
+    console.log(scrollTop);
+    if (scrollTop > (headerHeight)) {
+        console.log("jojo");
+        $('.search-block--parag').hide('fast', 'swing')
+    }
+    if (scrollTop <= (headerHeight)) {
+        $('.search-block--parag').show('fast', 'swing')
+    }
+});
+
+
 function getBooks(e) {
     e.preventDefault();
     var alert = $('#alert');
