@@ -5,19 +5,31 @@ $accent-light: #ee7f00;
 $anim-color-1: #faba00;
 $anim-color-2: #db001b;
 
-@font-face {
-  font-family: 'Open Sans';
-  src: url("https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext");
-}
+//@font-face {
+//  font-family: 'Open Sans';
+//  src: url("https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext");
+//}
 
 html {
   overflow-y: scroll;
+  font-size: 15px
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   color: rgb(51, 51, 51);
   background-color: rgb(234, 236, 236);
+}
+
+.go-top {
+  background-color: $accent-light;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 6%;
+  right: 3%;
+  display: none;
+  border-radius: 50%;
 }
 
 .row {
@@ -94,6 +106,9 @@ body {
   display: block;
   margin: -1px auto 0;
   height: 30px;
+  &--go-top {
+    height: 48px;
+  }
 }
 
 .results-block {
@@ -121,7 +136,7 @@ body {
 
   &__cover {
     padding: 0 0 5%;
-    height: 220px;
+    height: 150px;
     &__image {
       display: block;
       margin: 0 auto;
@@ -182,11 +197,6 @@ body {
     width: 46%;
   }
 
-  .header {
-    &__heading {
-      font-size: 2rem;
-    }
-  }
 }
 
 @media (min-width: 992px) {
@@ -202,5 +212,27 @@ body {
   }
   .card {
     width: 23%;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  html {
+    font-size: 16px
+  }
+
+  .header {
+    &__heading {
+      font-size: 2rem;
+    }
+  }
+
+  .book {
+    &__subject {
+    }
+
+    &__cover {
+      height: 200px;
+    }
   }
 }

@@ -2,11 +2,26 @@ $(window).on('scroll', function () {
 
     var headerHeight = $('.header').outerHeight();
     var scrollTop = $(window).scrollTop();
-    if (scrollTop > (headerHeight)) {
+
+    if (scrollTop > (headerHeight + 30)) {
         $('.search-block__parag').hide('fast', 'swing')
     }
-    if (scrollTop < (headerHeight)) {
+    if (scrollTop <= (headerHeight + 30)) {
         $('.search-block__parag').show('fast', 'swing')
+    }
+});
+
+$(window).on('scroll', function () {
+
+    var windowHeight = $(window).height();
+    var scrollTop = $(window).scrollTop();
+    console.log("scrollTOP: " + scrollTop);
+    console.log("window height: " + (windowHeight / 4));
+    if (scrollTop > (windowHeight / 4 )) {
+        $('#goTop').show('fast', 'swing')
+    }
+    if (scrollTop <= (windowHeight / 4 )) {
+        $('#goTop').hide('fast', 'swing')
     }
 });
 
