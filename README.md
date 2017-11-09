@@ -1,3 +1,3 @@
 # GWO-recruitment-task
 
-Oczywiście wiele rzeczy mógłbym zrobić lepiej, ale mam nadzieję, że chociaż nie wstyd pokazać :)
+HTML/SCSS/jQuery/AJAX : recruitment task "present data from API" - passed :)
