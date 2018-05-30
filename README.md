@@ -1,3 +1,3 @@
-# GWO-recruitment-task
+# get and present data from api
 
-HTML/SCSS/jQuery/AJAX : recruitment task "present data from API" - passed :)
+HTML/SCSS/jQuery/AJAX
